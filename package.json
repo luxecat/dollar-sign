@@ -1,16 +1,22 @@
 {
   "name": "dollarsign",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a cli tool for when you're pasting in a command to your terminal, but it begins with the dreaded '$'",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "$": "./dist/index.js"
+  },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "link": "pnpm link --global",
+    "publish": "pnpm build && pnpm publish"
   },
   "keywords": [],
-  "author": "",
+  "author": "luxecat",
   "license": "ISC",
   "devDependencies": {
-    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^22.10.1",
     "typescript": "^5.7.2"
   }
 }
